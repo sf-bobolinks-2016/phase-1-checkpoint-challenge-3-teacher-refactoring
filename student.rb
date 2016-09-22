@@ -1,6 +1,10 @@
+require_relative 'feedback_module'
+# require_relative 'all_teachers'
+
 class Student
   attr_reader :age, :phase
   attr_accessor :name
+  include Feedback
 
   def initialize(options = {})
     @phase = 1
@@ -8,11 +12,7 @@ class Student
     @name = options.fetch(:name, "")
   end
 
-  def offer_high_five
-    "High five!"
-  end
-
-  def set_phase(num)
+  def set_phase(num) # common to all three
     response = ""
     if num == @phase
       response += "I'm doing phase #{@phase} again because "
