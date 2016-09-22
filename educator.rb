@@ -7,8 +7,7 @@ class Educator < Person
 
 	def initialize(options = {})
 		@phase = 3
-    	@age = options.fetch(:age, 0)
-    	@name = options.fetch(:name, "")
+		super()
 	end
 
 	def set_phase(num)
