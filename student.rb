@@ -1,16 +1,13 @@
-class Student
-  attr_reader :age, :phase
-  attr_accessor :name
+require_relative 'dbc_person.rb'
+class Student < DBCPerson
+
 
   def initialize(options = {})
     @phase = 1
-    @age = options.fetch(:age, 0)
-    @name = options.fetch(:name, "")
+    super #not sure what super is doing here, tests all pass without it
   end
 
-  def offer_high_five
-    "High five!"
-  end
+
 
   def set_phase(num)
     response = ""
