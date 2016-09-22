@@ -3,8 +3,7 @@ require_relative 'schoolstaff'
 
 class Teacher < SchoolStaff
   include Common
-  attr_reader :age, :salary, :phase, :performance_rating, :target_raise
-  attr_accessor :name
+  attr_reader :performance_rating
 
   def initialize(options={})
     super
@@ -19,15 +18,6 @@ class Teacher < SchoolStaff
     response
   end
 
-  def salary=(new_salary)
-    puts "This better be good!"
-    @salary = new_salary
-  end
-
-  def receive_raise(raise)
-    @salary += raise
-  end
-
   def set_performance_rating(rating)
     response = ""
     if rating > 90
@@ -39,4 +29,12 @@ class Teacher < SchoolStaff
     end
     response
   end
+
+    # super
+    # receive_raise(@target_raise)
+    # if rating > 90
+    # end
+
+
+  # end
 end
