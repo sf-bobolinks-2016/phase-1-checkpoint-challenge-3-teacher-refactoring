@@ -7,22 +7,12 @@ class Teacher < Academic
   attr_accessor :name
 
   def initialize(options={})
-    # @age = options.fetch(:age, 0)
-    # @name = options.fetch(:name, "")
     super
     @phase = 3
     @target_raise = 1000
   end
 
-  # def offer_high_five
-  #   "High five!"
-  # end
-
-  # def set_phase(num)
-  #   @phase = num
-  #   "Cool, I've always wanted to teach phase #{num}!"
-  # end
-
+  # UNIQUE! Saunters away!
   def teach_stuff
     response = ""
     response += "Listen, class, this is how everything works, fo SHO! "
@@ -31,15 +21,7 @@ class Teacher < Academic
     response
   end
 
-  # def salary=(new_salary)
-  #   puts "This better be good!"
-  #   @salary = new_salary
-  # end
-
-  # def receive_raise(raise)
-  #   @salary += raise
-  # end
-
+  # UNIQUE! rating
   def set_performance_rating(rating)
     response = ""
     if rating > 90
