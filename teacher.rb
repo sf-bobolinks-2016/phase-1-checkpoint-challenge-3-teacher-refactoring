@@ -5,9 +5,8 @@ class Teacher < Staff
   attr_reader :performance_rating
 
   def initialize(options={})
+    super(options)
     @phase = 3
-    @age = options.fetch(:age, 0)
-    @name = options.fetch(:name, "")
     @target_raise = 1000
   end
 
