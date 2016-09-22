@@ -1,4 +1,8 @@
-class ApprenticeTeacher
+require_relative 'teacher'
+
+class ApprenticeTeacher < Teacher
+  undef_method :performance_rating
+
   attr_reader :age, :salary, :phase, :target_raise
   attr_accessor :name
 
@@ -7,10 +11,6 @@ class ApprenticeTeacher
     @name = options.fetch(:name, "")
     @target_raise = 800
     @phase = 3
-  end
-
-  def offer_high_five
-    "High five!"
   end
 
   def set_phase(num)
