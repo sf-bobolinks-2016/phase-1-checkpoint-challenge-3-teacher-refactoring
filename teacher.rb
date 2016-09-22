@@ -1,8 +1,8 @@
 require_relative 'teachers'
 require_relative 'tool'
 
-class Teacher < Teachers
-include Tool
+class Teacher < Tool
+include Teachers
   attr_reader :age, :salary, :phase, :performance_rating, :target_raise
   attr_accessor :name
 

@@ -1,7 +1,7 @@
 require_relative 'tool'
 
-class Student 
-include Tool
+class Student < Tool
+
 
   attr_reader :age, :phase
   attr_accessor :name
