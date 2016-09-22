@@ -13,14 +13,6 @@ class Teacher < Educator
     super
   end
 
-  def teach_stuff
-    response = ""
-    response += "Listen, class, this is how everything works, fo SHO! "
-    response += "*drops flat-out insane knowledge bomb* "
-    response += "... You're welcome. *saunters away*"
-    response
-  end
-
   def set_performance_rating(rating)
     response = ""
     if rating > 90
