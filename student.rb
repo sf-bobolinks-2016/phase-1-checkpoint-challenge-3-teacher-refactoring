@@ -1,7 +1,7 @@
-require_relative 'all_teachers'
 require_relative 'feedback_module'
+# require_relative 'all_teachers'
 
-class Student < All_Teachers
+class Student
   attr_reader :age, :phase
   attr_accessor :name
   include Feedback
@@ -12,17 +12,17 @@ class Student < All_Teachers
     @name = options.fetch(:name, "")
   end
 
-  # def set_phase(num) # common to all three
-  #   response = ""
-  #   if num == @phase
-  #     response += "I'm doing phase #{@phase} again because "
-  #     response += "I put my learning first. I'm gonna rock it!"
-  #   else
-  #     response = "Oooh, phase #{num}. I hope I'm ready!"
-  #   end
-  #   @phase = num
-  #   response
-  # end
+  def set_phase(num) # common to all three
+    response = ""
+    if num == @phase
+      response += "I'm doing phase #{@phase} again because "
+      response += "I put my learning first. I'm gonna rock it!"
+    else
+      response = "Oooh, phase #{num}. I hope I'm ready!"
+    end
+    @phase = num
+    response
+  end
 
   def learn_stuff
     response = ""
