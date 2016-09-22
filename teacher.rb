@@ -1,6 +1,8 @@
-class Teacher
-  attr_reader :age, :salary, :phase, :performance_rating, :target_raise
-  attr_accessor :name
+require_relative 'Staff'
+
+class Teacher < Staff
+
+  attr_reader :performance_rating
 
   def initialize(options={})
     @phase = 3
