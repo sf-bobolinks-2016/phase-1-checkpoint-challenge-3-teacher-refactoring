@@ -18,4 +18,8 @@ class Staff < Person
     @salary += raise
   end
 
+  def teach_stuff(str)
+    str
+  end
+
 end
