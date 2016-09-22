@@ -13,8 +13,6 @@ class Teacher < School
     @target_raise = 1000
   end
 
-
-
   def teach_stuff
     response = ""
     response += "Listen, class, this is how everything works, fo SHO! "
