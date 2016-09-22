@@ -1,12 +1,9 @@
 require_relative 'person'
 
 class Student < Person
-  attr_reader :age, :phase
-  attr_accessor :name
-
   def initialize(options={})
     super(options)
-    @phase = @phase = options.fetch(:phase) {1}
+    @phase = 1
   end
 
   # def offer_high_five

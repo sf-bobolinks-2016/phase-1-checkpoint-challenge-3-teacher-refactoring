@@ -5,7 +5,7 @@ class Educator < Person
 
   def initialize(options={})
     super(options)
-    @phase = options.fetch(:phase) {3}
+    @phase = 3
     @salary = options.fetch(:salary) {0}
   end
 
@@ -21,5 +21,17 @@ class Educator < Person
 
   def receive_raise(raise)
     @salary += raise
+  end
+
+  def set_performance_rating(rating)
+    response = ""
+    if rating > self.class::RATING_THRESHOLD
+      receive_raise(@target_raise)
+      response = "Yay, I'm a great employee!"
+    else
+      response += "Oh, well -- thanks to this actionable, specific, and kind "
+      response += "feedback, I'll do better next time."
+    end
+    response
   end
 end
