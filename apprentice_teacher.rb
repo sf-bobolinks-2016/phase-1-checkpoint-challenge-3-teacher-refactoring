@@ -4,10 +4,6 @@ class ApprenticeTeacher < Teacher
   attr_reader :age, :salary, :phase, :target_raise
   attr_accessor :name
 
-  # def performance_rating
-  #   raise "NoMethodError"
-  # end
-
   def initialize(options={})
     super
     @target_raise = 800
