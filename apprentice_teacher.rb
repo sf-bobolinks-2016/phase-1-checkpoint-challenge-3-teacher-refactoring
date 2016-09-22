@@ -17,10 +17,6 @@ class ApprenticeTeacher < Teacher
     response
   end
 
-  def receive_raise(raise)
-    @salary += raise
-  end
-
   def set_performance_rating(rating)
     response = ""
     if rating > 80
