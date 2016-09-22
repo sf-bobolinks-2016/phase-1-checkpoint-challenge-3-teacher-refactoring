@@ -1,4 +1,5 @@
 require_relative '../student'
+require_relative '../high_fivable'
 
 describe Student do
   let(:amir) { Student.new({name: "Amir Fayek", age: 21}) }

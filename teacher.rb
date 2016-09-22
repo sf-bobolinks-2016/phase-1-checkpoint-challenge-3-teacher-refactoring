@@ -1,4 +1,8 @@
+require_relative 'high_fivable'
+
 class Teacher
+  include HighFivable
+
   attr_reader :age, :salary, :phase, :performance_rating, :target_raise
   attr_accessor :name
 
@@ -7,10 +11,7 @@ class Teacher
     @age = options.fetch(:age, 0)
     @name = options.fetch(:name, "")
     @target_raise = 1000
-  end
-
-  def offer_high_five
-    "High five!"
+    @performance_rating = 0
   end
 
   def set_phase(num)
@@ -36,6 +37,7 @@ class Teacher
   end
 
   def set_performance_rating(rating)
+    @performance_rating = rating
     response = ""
     if rating > 90
       receive_raise(@target_raise)
