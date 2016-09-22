@@ -22,4 +22,16 @@ class Staff < Person
     str
   end
 
+  def set_performance_rating(rating, min_rating)
+    response = ""
+    if rating > min_rating
+      receive_raise(@target_raise)
+      response = "Yay, I'm a great employee!"
+    else
+      response += "Oh, well -- thanks to this actionable, specific, and kind "
+      response += "feedback, I'll do better next time."
+    end
+    response
+  end
+
 end
