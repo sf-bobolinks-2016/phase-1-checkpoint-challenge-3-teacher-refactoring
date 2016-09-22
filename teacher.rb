@@ -1,6 +1,6 @@
 require_relative 'high_five'
 class Teacher
-  attr_reader :age, :phase, :target_raise, :performance_rating
+  attr_reader :age, :performance_rating, :phase, :target_raise
   attr_accessor :name, :salary
   include High_five
   def initialize(options={})
@@ -8,6 +8,7 @@ class Teacher
     @age = options.fetch(:age, 0)
     @name = options.fetch(:name, "")
     @target_raise = 1000
+    @performance_rating = 0
   end
 
   def set_phase(num)
