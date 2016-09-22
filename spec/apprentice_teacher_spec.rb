@@ -1,4 +1,5 @@
 require_relative '../person'
+require_relative '../educator'
 require_relative '../apprentice_teacher'
 
 describe ApprenticeTeacher do
