@@ -1,21 +1,16 @@
-class Teacher
+require_relative 'educator'
+require_relative 'high_five'
+require_relative 'phaser'
+
+class Teacher < Educator
   attr_reader :age, :salary, :phase, :performance_rating, :target_raise
   attr_accessor :name
+  include High_five
+  include Phaser
 
   def initialize(options={})
-    @phase = 3
-    @age = options.fetch(:age, 0)
-    @name = options.fetch(:name, "")
     @target_raise = 1000
-  end
-
-  def offer_high_five
-    "High five!"
-  end
-
-  def set_phase(num)
-    @phase = num
-    "Cool, I've always wanted to teach phase #{num}!"
+    super
   end
 
   def teach_stuff
@@ -26,23 +21,13 @@ class Teacher
     response
   end
 
-  def salary=(new_salary)
-    puts "This better be good!"
-    @salary = new_salary
-  end
-
-  def receive_raise(raise)
-    @salary += raise
-  end
-
   def set_performance_rating(rating)
     response = ""
     if rating > 90
       receive_raise(@target_raise)
       response = "Yay, I'm a great employee!"
     else
-      response += "Oh, well -- thanks to this actionable, specific, and kind "
-      response += "feedback, I'll do better next time."
+      response = "Oh, well -- thanks to this actionable, specific, and kind feedback, I'll do better next time."
     end
     response
   end
