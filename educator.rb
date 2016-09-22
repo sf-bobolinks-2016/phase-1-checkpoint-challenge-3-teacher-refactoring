@@ -1,5 +1,7 @@
 require_relative 'person'
 
+#Educator inherits from person since all classes share functionality of
+#person, but only a few share share the attributes of an educator.
 class Educator < Person
 	attr_reader :salary, :target_raise
 
