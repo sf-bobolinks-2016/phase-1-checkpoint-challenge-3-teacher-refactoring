@@ -2,9 +2,12 @@ require_relative 'teacher'
 
 class ApprenticeTeacher < Teacher
 
+  undef_method :performance_rating
+
   def initialize(options={})
     super
     @target_raise = 800
+    @target_rating = 80
   end
 
   def teach_stuff
@@ -17,17 +20,6 @@ class ApprenticeTeacher < Teacher
 
   def receive_raise(raise)
     @salary += raise
-  end
-
-  def set_performance_rating(rating)
-    response = ""
-    if rating > 80
-      response = "Yay, I'm a great employee!"
-      receive_raise(@target_raise)
-    else
-      response = "Oh, well -- thanks to this actionable, specific, and kind feedback, I'll do better next time."
-    end
-    response
   end
 
   def attend_training_session

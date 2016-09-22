@@ -1,5 +1,5 @@
 class Teacher
-  attr_reader :age, :salary, :phase, :target_raise
+  attr_reader :age, :salary, :phase, :target_raise, :target_rating, :performance_rating
   attr_accessor :name
 
   def initialize(options={})
@@ -7,6 +7,8 @@ class Teacher
     @age = options.fetch(:age, 0)
     @name = options.fetch(:name, "")
     @target_raise = 1000
+    @target_rating = 90
+    @performance_rating = nil
   end
 
   def offer_high_five
@@ -37,8 +39,8 @@ class Teacher
 
   def set_performance_rating(rating)
     response = ""
-    if rating > 90
-      receive_raise(@target_raise)
+    if rating > target_rating
+      receive_raise(target_raise)
       response = "Yay, I'm a great employee!"
     else
       response += "Oh, well -- thanks to this actionable, specific, and kind "

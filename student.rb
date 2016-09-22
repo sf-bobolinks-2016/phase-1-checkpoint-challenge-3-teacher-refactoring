@@ -1,5 +1,5 @@
 class Student
-  attr_reader :age, :phase
+
   attr_accessor :name
 
   def initialize(options = {})
@@ -30,4 +30,5 @@ class Student
     response += "Now I feel like a genius!"
     response
   end
+
 end
