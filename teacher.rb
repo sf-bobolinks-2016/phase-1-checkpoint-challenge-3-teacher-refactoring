@@ -1,17 +1,18 @@
-class Teacher
-  attr_reader :age, :salary, :phase, :performance_rating, :target_raise
-  attr_accessor :name
+require_relative 'person'
+
+class Teacher < Person
+  attr_reader :salary, :performance_rating, :target_raise
 
   def initialize(options={})
-    @phase = 3
-    @age = options.fetch(:age, 0)
-    @name = options.fetch(:name, "")
+    super(options)
+    @phase = options.fetch(:phase) {3}
     @target_raise = 1000
+    @salary = options.fetch(:salary) {0}
   end
 
-  def offer_high_five
-    "High five!"
-  end
+  # def offer_high_five
+  #   "High five!"
+  # end
 
   def set_phase(num)
     @phase = num
