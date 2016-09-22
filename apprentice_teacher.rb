@@ -5,13 +5,14 @@ class ApprenticeTeacher < Instructor
     @target_raise = 800# possibly make this  a constant
   end
 
-  def teach_stuff
+  def teach_stuff #not sure how to refactor this, logic is the same, last two
+                  #responses are what's different
     response = ""
     response += "Listen, class, this is how everything works. "
-    super
     response += "*drops crazy knowledge bomb* "
     response += "... You're welcome."
     response
+
   end
 
   def set_performance_rating(rating)

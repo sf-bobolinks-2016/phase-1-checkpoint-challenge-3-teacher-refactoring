@@ -1,13 +1,10 @@
 require_relative 'dbc_person.rb'
 class Student < DBCPerson
 
-
   def initialize(options = {})
     @phase = 1
     super #not sure what super is doing here, tests all pass without it
   end
-
-
 
   def set_phase(num)
     response = ""
