@@ -18,10 +18,6 @@ class ApprenticeTeacher < Teacher
     response
   end
 
-  def receive_raise(raise)
-    @salary += raise
-  end
-
   def attend_training_session
     puts "Whoa. I know ruby-fu"
   end
