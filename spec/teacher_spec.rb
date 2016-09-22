@@ -56,7 +56,7 @@ describe Teacher do
   context "#teach_stuff" do
     it "teaches stuff in a real sassy manner" do
       response = jan.teach_stuff
-      expect(response).to eq("Listen, class, this is how everything works, fo SHO! *drops flat-out insane knowledge bomb* ... You're welcome. *saunters away*")
+      expect(response).to eq("Listen, class, this is how everything works. *drops crazy knowledge bomb* ... You're welcome.")
     end
   end
 
