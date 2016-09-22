@@ -28,9 +28,10 @@ class Teacher < SchoolStaff
       response += "feedback, I'll do better next time."
     end
     response
+    # super(90)
   end
 
-    # super
+    # super(rating=90)
     # receive_raise(@target_raise)
     # if rating > 90
     # end
