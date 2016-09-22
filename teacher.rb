@@ -17,4 +17,9 @@ class Teacher < Educator
     response += "... You're welcome. *saunters away*"
     response
   end
+
+  def set_performance_rating(rating)
+    @performance_rating = rating
+    super
+  end
 end
