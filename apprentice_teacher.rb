@@ -2,6 +2,7 @@ require_relative 'teacher'
 
 class ApprenticeTeacher < Teacher
   attr_reader :salary, :target_raise
+  RATING_THRESHOLD = 80
 
   def initialize(options={})
     super
@@ -17,14 +18,11 @@ class ApprenticeTeacher < Teacher
   end
 
   def set_performance_rating(rating)
-    response = ""
-    if rating > 80
-      response = "Yay, I'm a great employee!"
-      receive_raise(@target_raise)
-    else
-      response = "Oh, well -- thanks to this actionable, specific, and kind feedback, I'll do better next time."
-    end
-    response
+    # raise NoMethodError if 
+    # need raise error in here
+      #things tried:
+        #rating.is_a? Integer == false
+        #rating == nil 
   end
 
   def attend_training_session

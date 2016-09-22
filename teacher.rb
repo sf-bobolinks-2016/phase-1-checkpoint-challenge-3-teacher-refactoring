@@ -1,9 +1,12 @@
 require_relative 'school_community_member'
 
 class Teacher < SchoolCommunityMember 
-  attr_reader :salary, :performance_rating, :target_raise
-  
+  attr_reader :performance_rating, :target_raise
+  attr_accessor :salary 
+  RATING_THRESHOLD = 90
+
   def initialize(options={})
+    super
     @target_raise = 1000
   end
 
@@ -22,7 +25,7 @@ class Teacher < SchoolCommunityMember
 
   def set_performance_rating(rating)
     response = ""
-    if rating > 90
+    if rating > RATING_THRESHOLD
       receive_raise(@target_raise)
       response = "Yay, I'm a great employee!"
     else
