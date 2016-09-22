@@ -1,7 +1,7 @@
 require_relative 'school'
 require_relative 'Teaching'
 
-class ApprenticeTeacher < School
+class ApprenticeTeacher < Teacher
   include Teaching
   attr_reader :age, :salary, :phase, :target_raise
   attr_accessor :name
