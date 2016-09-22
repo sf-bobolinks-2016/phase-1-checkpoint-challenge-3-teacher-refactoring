@@ -1,3 +1,4 @@
+require'pry'
 require_relative '../apprentice_teacher'
 
 describe ApprenticeTeacher do
@@ -14,6 +15,7 @@ describe ApprenticeTeacher do
   end
 
   it "does not have performance rating available because ApprenticeTeacher has no rating" do
+
     expect{rey.send(:performance_rating)}.to raise_error(NoMethodError)
   end
 
