@@ -1,16 +1,27 @@
+require_relative 'highfive'
+
 class Teacher
-  attr_reader :age, :salary, :phase, :performance_rating, :target_raise
+  attr_reader :age, :salary, :phase,  :target_raise
   attr_accessor :name
+
+  include Highfive
+
+  def self.inherited(klass)
+    klass.send(:define_method, :performance_rating) do
+      raise NoMethodError
+    end
+  end
+
+  def performance_rating
+
+  end
+
 
   def initialize(options={})
     @phase = 3
-    @age = options.fetch(:age, 0)
-    @name = options.fetch(:name, "")
+    @age = options.fetch(:age) {0}
+    @name = options.fetch(:name) {''}
     @target_raise = 1000
-  end
-
-  def offer_high_five
-    "High five!"
   end
 
   def set_phase(num)
@@ -46,4 +57,6 @@ class Teacher
     end
     response
   end
+
+
 end
