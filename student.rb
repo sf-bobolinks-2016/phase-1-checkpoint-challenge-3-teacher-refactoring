@@ -1,14 +1,14 @@
-require_relative 'tool'
+require_relative 'school'
 
-class Student < Tool
+class Student < School
 
 
   attr_reader :age, :phase
   attr_accessor :name
 
   def initialize(options = {})
+    super
     @phase = 1
- 
   end
 
 

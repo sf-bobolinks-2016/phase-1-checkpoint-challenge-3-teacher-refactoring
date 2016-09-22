@@ -1,15 +1,14 @@
 require_relative 'teachers'
-require_relative 'tool'
+require_relative 'school'
 
-class Teacher < Tool
+class Teacher < School
 include Teachers
   attr_reader :age, :salary, :phase, :performance_rating, :target_raise
   attr_accessor :name
 
   def initialize(options={})
+    super
     @phase = 3
-    @age = options.fetch(:age, 0)
-    @name = options.fetch(:name, "")
     @target_raise = 1000
   end
 
@@ -19,11 +18,6 @@ include Teachers
     response += "*drops flat-out insane knowledge bomb* "
     response += "... You're welcome. *saunters away*"
     response
-  end
-
-  def set_phase(num)
-    @phase = num
-    "Cool, I've always wanted to teach phase #{num}!"
   end
 
   def set_performance_rating(rating)
