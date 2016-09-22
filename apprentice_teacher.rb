@@ -1,4 +1,6 @@
-class ApprenticeTeacher
+require_relative 'school_teachers.rb'
+
+class ApprenticeTeacher < SchoolTeachers
   attr_reader :age, :salary, :phase, :target_raise
   attr_accessor :name
 
@@ -13,10 +15,10 @@ class ApprenticeTeacher
     "High five!"
   end
 
-  def set_phase(num)
-    @phase = num
-    "Cool, I've always wanted to teach phase #{num}!"
-  end
+  # def set_phase(num)
+  #   @phase = num
+  #   "Cool, I've always wanted to teach phase #{num}!"
+  # end
 
   def teach_stuff
     response = ""
@@ -26,14 +28,14 @@ class ApprenticeTeacher
     response
   end
 
-  def salary=(new_salary)
-    puts "This better be good!"
-    @salary = new_salary
-  end
+  # def salary=(new_salary)
+  #   puts "This better be good!"
+  #   @salary = new_salary
+  # end
 
-  def receive_raise(raise)
-    @salary += raise
-  end
+  # def receive_raise(raise)
+  #   @salary += raise
+  # end
 
   def set_performance_rating(rating)
     response = ""
