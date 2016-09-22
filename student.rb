@@ -1,6 +1,7 @@
 require_relative 'academic'
 
 class Student < Academic
+
   def set_phase(num)
     response = ""
     if num == @phase

@@ -12,7 +12,7 @@ class Teacher < Academic
     @target_raise = 1000
   end
 
-  # UNIQUE! Saunters away!
+  # UNIQUE!
   def teach_stuff
     response = ""
     response += "Listen, class, this is how everything works, fo SHO! "
@@ -21,7 +21,7 @@ class Teacher < Academic
     response
   end
 
-  # UNIQUE! rating
+  # UNIQUE!
   def set_performance_rating(rating)
     response = ""
     if rating > 90
