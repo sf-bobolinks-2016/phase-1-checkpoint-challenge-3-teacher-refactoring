@@ -1,6 +1,8 @@
-class Educator
-  attr_reader :age, :salary, :phase, :target_raise
-  attr_accessor :name
+require_relative 'dbc_affiliate'
+
+class Educator < DBC_affiliate
+  attr_reader :salary, :target_raise
+  attr_accessor
 
   def initialize(options={})
     @name = options.fetch(:name, "")
@@ -24,6 +26,7 @@ class Educator
     else
       response = "Oh, well -- thanks to this actionable, specific, and kind feedback, I'll do better next time."
     end
+    response
   end
 
     def teach_stuff
