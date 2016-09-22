@@ -1,7 +1,7 @@
 require_relative 'high_five'
 class Teacher
-  attr_reader :age, :salary, :phase, :target_raise
-  attr_accessor :name
+  attr_reader :age, :phase, :target_raise, :performance_rating
+  attr_accessor :name, :salary
   include High_five
   def initialize(options={})
     @phase = 3
@@ -43,6 +43,4 @@ class Teacher
     end
     response
   end
-  private 
-  attr_reader :performance_rating
 end
