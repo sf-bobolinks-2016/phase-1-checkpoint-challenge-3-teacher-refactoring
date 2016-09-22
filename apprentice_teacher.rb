@@ -3,6 +3,7 @@ require_relative 'module_teacher'
 
 
 class ApprenticeTeacher < DBCTeam
+  RATING_REVIEW = 80
   include Teach
   attr_reader :salary, :phase, :target_raise
 
