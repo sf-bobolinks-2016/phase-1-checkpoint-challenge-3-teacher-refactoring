@@ -1,3 +1,5 @@
+require_relative '../high_fivable'
+require_relative '../educator'
 require_relative '../apprentice_teacher'
 
 describe ApprenticeTeacher do
