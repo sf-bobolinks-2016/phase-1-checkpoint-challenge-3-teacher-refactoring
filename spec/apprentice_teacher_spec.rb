@@ -1,6 +1,4 @@
 require_relative '../apprentice_teacher'
-require_relative '../teacher'
-require_relative '../high_fivable'
 
 describe ApprenticeTeacher do
   let(:rey) { ApprenticeTeacher.new({name: "Rey", age: 21}) }
