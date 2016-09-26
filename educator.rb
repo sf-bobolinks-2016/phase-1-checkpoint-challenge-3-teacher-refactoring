@@ -6,6 +6,7 @@ class Educator < Person
   def initialize(options={})
     super
     @phase = 3
+    @target_raise = self.class::TARGET_RAISE
   end
 
   def set_phase(num)
