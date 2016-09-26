@@ -3,10 +3,12 @@
 Edit this file to answer the following questions. Give examples. You may need to do a bit of research. :)
 
 1. Why is Hash.fetch useful?
+It allows the user to assign either "nil" or "false" as the default value, which you couldn't do otherwise because they are "falsey" values.
 
 2. What is the disadvantage of single inheritance, and what's a possible solution to that problem?
 
 3. Why are these classes initialized with an options hash?
+
 
 4. What is the purpose of the private keyword in a class? What does it protect you from and why is that valuable?
 
