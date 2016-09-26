@@ -6,11 +6,6 @@ class Teacher < Educator
   RATING  = 90
   TARGET_RAISE = 1000
 
-  # def initialize(options={})
-  #   super
-  #   @target_raise = 1000
-  # end
-
   def teach_stuff
     response = ""
     response += "Listen, class, this is how everything works, fo SHO! "
